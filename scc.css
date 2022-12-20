@@ -1,0 +1,259 @@
+body {
+    background-color:rgb(241, 230, 181);
+}
+
+.grida {
+    margin-top: 100px;
+    display: grid;
+    grid-template-areas:
+        'about courses'
+        'about courses'
+        'about courses'
+        'contact courses'
+        'contact courses'
+        'gallery gallery';
+}
+.container {
+    margin: 0px;
+
+}
+.navbar {
+    grid-area: nav;
+    background-color: rgb(192, 188, 130);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 10px 23px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar::before
+{
+    content: "";
+    background-image: url(https://images.pexels.com/photos/5428256/pexels-photo-5428256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* #home::before {
+    content: "";
+    background-image: url(https://images.pexels.com/photos/5428256/pexels-photo-5428256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+ */
+#home {
+    grid-area: home;
+    text-align: center;
+    
+}
+
+#home h1 {
+    padding-top: 60px;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+.tag {
+    font-size: 30px;
+    text-shadow: 2px 2px rgb(95, 89, 81);
+}
+
+#about {
+    grid-area: about;
+    /* border: 2px solid black; */
+    padding: 20px;
+}
+
+#courses {
+    grid-area: courses;
+    /* border: 2px solid black; */
+    padding: 20px;
+}
+
+#courses li {
+    font-size: 20px;
+}
+
+h2{
+    text-decoration: underline;
+    font-size: 37px;
+    text-align: center;
+}
+
+#gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-areas: 
+        'head head'
+        'image image'
+    ;
+    /* border: 2px solid black; */
+    
+}
+
+#head{
+    grid-area: head;
+}
+
+#image{
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#image img{
+    width: 200px;
+    height: 200px;
+    margin: 30px 10px;
+}  
+
+#contact {
+    grid-area: contact;
+    /* border: 2px solid black; */
+    margin-bottom: 20px;
+}
+
+#contact img {
+    margin-right: 40px;
+    width: 35px;
+}
+
+.insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    grid-area: footer;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width:300px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width:700px) {
+    
+    /* body {
+        background-color: blue;
+    } */
+    /* #home::before {
+    content: "";
+    background-image: url(https://images.pexels.com/photos/5428256/pexels-photo-5428256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5; 
+}*/
+
+.navbar::before
+{
+    content: "";
+    background-image: url(https://images.pexels.com/photos/5428256/pexels-photo-5428256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+    #home h1 {
+    padding-top: 20px;
+    text-decoration: underline;
+    font-size: 29px;
+    }
+    #about{
+        margin-top: 45px;
+    }
+    .grida {
+    margin-top: 0px;
+    display: grid;
+    grid-template-areas:
+        'about'
+        'courses'
+        'gallery'
+        'contact';
+    }
+
+}
+
+@media (min-width: 700px) and (max-width:800px) {
+    /* body {
+        background-color: yellow;
+    } */
+    #home h1 {
+    padding-top: 60px;
+    text-decoration: underline;
+    font-size: 35px;
+    }
+    .grida {
+    margin-top: 100px;
+    display: grid;
+    grid-template-areas:
+        'about'
+        'courses'
+        'gallery'
+        'contact';
+}
+
+}
+
+@media (min-width: 800px) {
+    /* body {
+        background-color: green;
+    } */
+}
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    font-size: 17px;
+}
